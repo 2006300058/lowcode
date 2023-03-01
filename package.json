@@ -29,7 +29,7 @@
     "vue-router": "^4.1.6",
     "vue-video-player": "^4.0.6",
     "vuedraggable": "^2.24.3",
-    "vuex": "^3.6.2"
+    "vuex": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -62,7 +62,7 @@
     },
     "rules": {
       "vue/multi-word-component-names": "off",
-      "no-constant-condition":"warn",
+      "no-constant-condition": "warn",
       "no-unused-vars": "off"
     }
   },
