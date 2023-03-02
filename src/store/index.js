@@ -84,6 +84,26 @@ export default createStore ({
                 id: uuid(),
             };
             commit('addComponent', component);
+        },
+        handleTopcomponent({ commit, state }, { id }) {
+            //将当前操作元素放在队尾
+            const layout = state.editorLayout;
+            const index = layout.findIndex((item) => item.id === id);
+            const cur = layout.splice(index, 1);
+            layout.push(cur[0]);
+            commit('set_editorLayout', {
+                editorLayout: layout,
+            });
+        },
+        handleBottomComponent({ commit, state}, { id }) {
+            //放队头
+            const layout = state.editorLayout;
+            const index = layout.findIndex((item) => item.id === id);
+            const cur = layout.splice(index , 1);
+            layout.unshift(cur[0]);
+            commit('set_editorLayout', {
+                editorLayout: layout,
+            });
         }
     },
     getters: {
