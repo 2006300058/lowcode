@@ -28,13 +28,14 @@ export default {
     setup(props,context) {
         const data = reactive({
             options: computed(()=> props.data.data.componentData),
-            boxStyle: computed(() => {
+            boxStyle: computed(() => {             
                 const { fourBorderRadius } = data.options;
                 const {left,right,top,bottom} = fourBorderRadius;
                 return { 
                     borderRadius: `${top}px ${right}px ${bottom}px ${left}px`
                 }
             }),
+            
             playOptions : computed(()=> {
                 return {
                     playbackRates: [0.5, 0.75, 1.0, 1.5, 1.75, 2.0],
