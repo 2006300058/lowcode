@@ -1,5 +1,5 @@
 <template>
-    <vue-json-editor
+    <vueJsonEditor
         :show-btns="false"
         @json-save="onJsonChange"
         :expandedOnStart="false"
@@ -8,7 +8,7 @@
         
 
     >
-    </vue-json-editor>
+    </vueJsonEditor>
 </template>
 
 <script>

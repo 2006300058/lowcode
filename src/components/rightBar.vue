@@ -40,18 +40,18 @@
                     default: null,
                 },
             },
-        setup() {
+        setup(props,context) {
             function handleDeleteComponent(){
-                this.$emit('handleDeleteComponent')
+                context.$emit('handleDeleteComponent')
             }
             function handleCopyComponent(){
-                this.$emit('handleCopyComponent')
+                context.$emit('handleCopyComponent')
             }
             function handleTopComponent(){
-                this.$emit('handleTopComponent')
+                context.$emit('handleTopComponent')
             }
             function handleBottomComponent(){
-                this.$emit('handleBottomComponent')
+                context.$emit('handleBottomComponent')
             }
             return {handleDeleteComponent,handleCopyComponent,handleTopComponent,handleBottomComponent}
         },
