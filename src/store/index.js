@@ -108,7 +108,10 @@ export default createStore ({
     },
     getters: {
         editorLayout: (state) => state.editorLayout,
-        //选择活跃组件
+        /**
+         * 
+         * 选择活跃组件
+         */
         selectComponent: (state) => state.editorLayout.find((v) => v.active === true),
         executeIndex: (state) => state.executeIndex,
         executeOpearation: (state) => state.executeOpearation,
